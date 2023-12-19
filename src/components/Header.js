@@ -45,7 +45,7 @@ const Header = () => {
                 <input
                   type="text"
                   id="first_name"
-                  className="pl-20 bg-gray-50 inputbg h-[4rem] text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="pl-20 bg-gray-50 shadow-md h-[4rem] text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   disabled
                 />
               ) : (
@@ -67,7 +67,7 @@ const Header = () => {
         </div>
       </div>
       {selectedData?.map((value, index) => (
-        <div key={index} className="lg:px-[9rem] md:px-[3rem] px-[0.5rem] pt-5 md:pt-0 container mx-auto pb-[1rem]">
+        <div key={index} className="lg:px-[9rem] md:px-[3rem] px-[0.5rem] pt-14 md:pt-18  container mx-auto pb-[1rem]">
           <a
             className={`block  max-w-full lg:mt-12 md:mt-18    ${
               value.featured ? 'border-l-4 border-[#5ba4a4]' : 'border border-blue-400'
@@ -105,7 +105,7 @@ const Header = () => {
                   <span
                     onClick={() => ongetValue(language)}
                     key={index}
-                    className="bg-blue-200 pt-[0.3rem] lg:mt-[2rem] text-[#55a8a8] hover:cursor-pointer hover:bg-[#5ba4a4] text-xs font-lg ml-2 h-6 w-18 px-2.5 py-0.5 rounded "
+                    className="bg-blue-200 pt-[0.3rem] lg:mt-[2rem] text-[#55a8a8] hover:cursor-pointer hover:bg-[#5ba4a4] hover:text-white text-xs font-lg ml-2 h-6 w-18 px-2.5 py-0.5 rounded "
                   >
                     {language}
                   </span>
