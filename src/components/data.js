@@ -11,7 +11,7 @@
       "postedAt": "1d ago",
       "contract": "Full Time",
       "location": "USA Only",
-      "languages": ["Frontend","Senior", "HTML", "CSS", "Javascript"],
+      "languages": ["Frontend","Senior", "HTML", "CSS"],
       "tools": []
     },
     {
