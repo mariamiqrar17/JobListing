@@ -28,13 +28,13 @@ const Header = () => {
     <div>
       <div className="bg-[#5ba4a4]">
         <div className="backimage">
-          <div className="lg:px-[6.5rem] md:px-[3rem] px-[0.5rem] pt-[7.8rem] mx-full">
+        <div className="lg:px-[6.5rem] md:px-[3rem] px-[0.5rem] pt-[7.8rem] mx-full">
             <div className="relative mb-[4rem]">
-              <div className="flex absolute inset-y-0 left-0 items-center lg:pl-[2rem] md:pl-[2rem] pl-[0.3rem]">
+              <div className="flex flex-wrap gap-1 absolute inset-y-0 left-2 items-center lg:pl-[2rem] md:pl-[2rem] pl-[0.3rem]">
                 {job.map((value, index) => (
-                  <div key={index} className="flex items-center space-x-2 lg:pl-[2rem]">
+                  <div key={index} className="flex items-center space-x-0 lg:pl-[2rem]">
                     <span className="bg-[#cde7e7] text-[#5ba4a4] px-2 py-1 text-md font-bold">{value}</span>
-                    <button onClick={() => removeData(value)}>
+                    <button onClick={() => removeData(value)} className="ml-1">
                       <span className="bg-[#5ba4a4] text-white px-2 hover:bg-black">X</span>
                     </button>
                   </div>
@@ -45,7 +45,7 @@ const Header = () => {
                 <input
                   type="text"
                   id="first_name"
-                  className="pl-20 bg-gray-50 shadow-md h-[4rem] text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="pl-20 bg-gray-50 shadow-md h-[5rem] md:h-[3rem] lg:h-[3rem] text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   disabled
                 />
               ) : (
@@ -64,12 +64,13 @@ const Header = () => {
               )}
             </div>
           </div>
+
         </div>
       </div>
       {selectedData?.map((value, index) => (
-        <div key={index} className="lg:px-[9rem] md:px-[3rem] px-[0.5rem] pt-14 md:pt-18  container mx-auto pb-[1rem]">
+        <div key={index} className="lg:px-[9rem] md:px-[3rem] px-[0.5rem] pt-16 lg:pt-1  md:pt-18  container mx-auto pb-[1rem]">
           <a
-            className={`block  max-w-full lg:mt-12 md:mt-18    ${
+            className={`block  max-w-full lg:mt-12 md:mt-18 border-1   ${
               value.featured ? 'border-l-4 border-[#5ba4a4]' : 'border border-blue-400'
             } lg:py-10 md:py-5 md:px-5  lg:px-16 px-3 py-3 mt-[2rem] md:mt-[0rem] bg-white rounded-lg shadow-md  dark:border-gray-700 `}
           >
@@ -100,12 +101,12 @@ const Header = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-1 md:pl-32 lg:pl-0 md:pt-2 pt-2 lg:pt-0">
+              <div className="flex flex-wrap gap-1 lg:gap-0 md:pl-32 lg:pl-0 md:pt-2 pt-2 lg:pt-0">
                 {value.languages.map((language, index) => (
                   <span
                     onClick={() => ongetValue(language)}
                     key={index}
-                    className="bg-blue-200 pt-[0.3rem] lg:mt-[2rem] text-[#55a8a8] hover:cursor-pointer hover:bg-[#5ba4a4] hover:text-white text-xs font-lg ml-2 h-6 w-18 px-2.5 py-0.5 rounded "
+                    className="bg-blue-200 pt-[0.3rem] lg:mt-[2rem] lg:ml-2 text-[#55a8a8] hover:cursor-pointer hover:bg-[#5ba4a4] hover:text-white text-xs font-lg ml-2 h-6 w-18 px-2.5 py-0.5 rounded "
                   >
                     {language}
                   </span>
