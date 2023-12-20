@@ -70,9 +70,9 @@ const Header = () => {
       {selectedData?.map((value, index) => (
         <div key={index} className="lg:px-[9rem] md:px-[3rem] px-[0.5rem] pt-16 lg:pt-1  md:pt-18  container mx-auto pb-[1rem]">
           <a
-            className={`block  max-w-full lg:mt-12 md:mt-18 border-1   ${
+            className={`block  max-w-full lg:mt-12 md:mt-18 border-2   ${
               value.featured ? 'border-l-4 border-[#5ba4a4]' : 'border border-blue-400'
-            } lg:py-10 md:py-5 md:px-5  lg:px-16 px-3 py-3 mt-[2rem] md:mt-[0rem] bg-white rounded-lg shadow-md  dark:border-gray-700 `}
+            } lg:py-10 md:py-5 md:px-5  lg:px-16 px-3 py-3 mt-[2rem] md:mt-[0rem] bg-white rounded-lg shadow-2xl  dark:border-gray-700 `}
           >
             <div className="flex justify-between md:flex-col lg:flex-row flex-col">
               <div className="flex flex-col lg:flex-row md:flex-row">
@@ -101,7 +101,7 @@ const Header = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-1 lg:gap-0 md:pl-32 lg:pl-0 md:pt-2 pt-2 lg:pt-0">
+              <div className="flex flex-wrap gap-1 lg:gap-0 md:pl-32 lg:flex-no-wrap lg:pl-0 lg:ml-5  md:pt-2 pt-2 lg:pt-0">
                 {value.languages.map((language, index) => (
                   <span
                     onClick={() => ongetValue(language)}
